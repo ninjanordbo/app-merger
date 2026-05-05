@@ -1,0 +1,13 @@
+<svg width="2313" height="1784" viewBox="0 0 2313 1784" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<ellipse cx="1156.5" cy="892" rx="1156.5" ry="892" fill="url(#pattern0_3191_80120)" fill-opacity="0.6"/>
+<defs>
+<pattern id="pattern0_3191_80120" patternUnits="userSpaceOnUse" patternTransform="matrix(13.7 0 0 13.7 0 0)" preserveAspectRatio="none" viewBox="0 0 137 137" width="1" height="1">
+<g id="pattern0_3191_80120_inner">
+<circle cx="25" cy="25" r="25" fill="url(#paint0_linear_3191_80120)"/>
+</g>
+</pattern><linearGradient id="paint0_linear_3191_80120" x1="8.49999" y1="-60" x2="63" y2="142.5" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D9D9D9" stop-opacity="0"/>
+<stop offset="1" stop-color="#88B56B"/>
+</linearGradient>
+</defs>
+</svg>

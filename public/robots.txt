@@ -1,0 +1,15 @@
+# robots.txt for Nabolagshelse
+
+User-agent: *
+Allow: /
+
+# Disallow private/dashboard areas (if you want to block them from search engines)
+Disallow: /dashboard/
+Disallow: /sonebygger/
+Disallow: /login/
+
+# Allow public pages
+Allow: /
+Allow: /hjelp/
+Allow: /personvern/
+

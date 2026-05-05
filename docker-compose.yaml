@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  nuxt-app:
+    container_name: nabolagshelse-app
+    image: nabolagshelse-app:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Expose port 3000 for Nuxt
+    volumes:
+      - .:/app # Mount current directory to allow live edits without rebuilding
+    restart: unless-stopped

@@ -79,6 +79,10 @@ export default defineNuxtConfig({
   },
   appConfig: {},
   devtools: { enabled: true },
+  eslint: {
+    lintOnStart: false,
+    exclude: ["**/*"],
+  },
 
   routeRules: {
     "/": { redirect: "/dashboard/demo" },

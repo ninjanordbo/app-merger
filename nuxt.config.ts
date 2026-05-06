@@ -57,8 +57,12 @@ export default defineNuxtConfig({
   ],
   ssr: false,
   nitro: {
-    preset: "static",
+    preset: 'spa',
   },
+  experimental: {
+    noViteNodeLoader: true,
+  },
+  manifest: false,
   pinia: {
     storesDirs: ["./store/**"],
   },
@@ -85,7 +89,7 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    "/": { redirect: "/dashboard/demo" },
+    // "/": { redirect: "/dashboard/demo" },
     "/dashboard/**": {
       appMiddleware: ["auth-token-guard"],
     },

@@ -3,12 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "start": "nuxt start"
+    "build": "node ./node_modules/nuxt/bin/nuxt.mjs build",
+    "dev": "node ./node_modules/nuxt/bin/nuxt.mjs dev --no-fork",
+    "generate": "node ./node_modules/nuxt/bin/nuxt.mjs generate",
+    "preview": "node ./node_modules/nuxt/bin/nuxt.mjs preview",
+    "postinstall": "node ./node_modules/nuxt/bin/nuxt.mjs prepare",
+    "start": "node ./node_modules/nuxt/bin/nuxt.mjs start"
   },
   "dependencies": {
     "@formkit/auto-animate": "^0.8.2",
@@ -19,7 +19,7 @@
     "@types/knex": "^0.16.1",
     "@vueuse/core": "^10.9.0",
     "amqplib": "^0.10.9",
-    "apexcharts": "^4.5.0",
+    "apexcharts": "^5.10.6",
     "axios": "^1.7.3",
     "chroma-js": "^3.1.2",
     "firebase": "^12.6.0",
@@ -28,7 +28,7 @@
     "html-to-image": "^1.11.13",
     "jsonwebtoken": "^9.0.2",
     "jspdf": "^4.0.0",
-    "nuxt": "^3.20.1",
+    "nuxt": "^3.13.0",
     "pinia": "^2.1.7",
     "uuid": "^13.0.0",
     "vue": "^3.4.21",

@@ -57,7 +57,7 @@ export default defineNuxtConfig({
   ],
   ssr: false,
   nitro: {
-    preset: 'spa',
+    preset: 'static',
   },
   experimental: {
     noViteNodeLoader: true,

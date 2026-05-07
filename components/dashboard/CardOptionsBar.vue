@@ -14,8 +14,11 @@
   </div>
 
   <div v-if="!isMapCard(card) && !isExample" class="flex">
-    <button @click="handleOpenCardEdit(card)">
-      <LucideSettings :size="20" />
+    <button
+      class="flex h-9 w-9 items-center justify-center rounded-md bg-[#3d5a4a] text-white duration-200 hover:bg-[#2d4a3a]"
+      @click="handleOpenCardEdit(card)"
+    >
+      <LucideSettings :size="20" class="text-white" />
     </button>
   </div>
 
@@ -31,9 +34,10 @@
 
   <button
     v-if="card.deletable && !isExample"
+    class="flex h-9 w-9 items-center justify-center rounded-md bg-[#3d5a4a] text-white duration-200 hover:bg-[#2d4a3a]"
     @click="() => deleteCard(card.id)"
   >
-    <LucideTrash2 :size="20" />
+    <LucideTrash2 :size="20" class="text-white" />
   </button>
 </template>
 

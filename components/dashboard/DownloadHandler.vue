@@ -3,8 +3,11 @@
     ref="dropdownElement"
     class="flex w-min flex-col items-start justify-center"
   >
-    <button @click="handleToggleDropdown">
-      <LucideDownload :size="20" />
+    <button
+      class="flex h-9 w-9 items-center justify-center rounded-md bg-[#3d5a4a] text-white duration-200 hover:bg-[#2d4a3a]"
+      @click="handleToggleDropdown"
+    >
+      <LucideDownload :size="20" class="text-white" />
     </button>
 
     <div class="relative w-full">

@@ -53,4 +53,3 @@ function handleSaveProject() {
   @apply flex items-center justify-center px-1 text-dark-blue duration-200 hover:-translate-y-1;
 }
 </style>
-</style>

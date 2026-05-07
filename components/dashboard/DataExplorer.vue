@@ -1445,7 +1445,7 @@ onUnmounted(() => {
         </div>
         <div v-if="!showLandingPage" class="flex items-center gap-[8px]">
           <button
-            class="flex items-center gap-[6px] px-[12px] py-[6px] text-[13px] text-white bg-[#3d5a4a] rounded-[6px] hover:bg-[#2d4a3a] transition-colors border-2 border-[#3d5a4a] hover:border-[#2d4a3a]"
+            class="flex items-center gap-[6px] rounded-md border-2 border-[#3d5a4a] bg-white py-1.5 pl-2 pr-3 text-[13px] text-[#3d5a4a] duration-200 hover:-translate-y-1"
             title="Legg til kort i dashboard"
             @click="addCardToDashboard"
           >

@@ -8,15 +8,25 @@
     </div>
 
     <div class="flex items-center justify-between gap-2">
-      <button class="option-button" @click="openCardEdit()">
+      <button
+        class="flex items-center justify-center rounded-md border-2 bg-white py-1.5 pl-2 pr-1 duration-200 hover:-translate-y-1"
+        style="border-color: #3d5a4a"
+        @click="openCardEdit()"
+      >
         <LucidePlus :size="20" style="color: #3d5a4a" />
         <span class="px-2 text-sm font-medium" style="color: #3d5a4a">Nytt kort</span>
       </button>
 
-      <button class="option-button-save" @click="handleSaveProject()">
+
+      <button
+        class="flex items-center justify-center rounded-md py-1.5 pl-2 pr-1 duration-200 hover:-translate-y-1"
+        style="background-color: #3d5a4a; color: white"
+        @click="handleSaveProject()"
+      >
         <LucideSave :size="20" class="text-white" />
-        <span class="px-2 text-sm font-medium text-white">Lagre</span>
+        <span class="px-2 text-sm font-medium" style="color: white">Lagre</span>
       </button>
+
 
       <DashboardSaveState :is-saved="isProjectSaved" />
     </div>
@@ -46,7 +56,7 @@ function handleSaveProject() {
 }
 
 .option-button-save {
-  @apply flex items-center justify-center rounded-md bg-[#3d5a4a] py-1.5 pl-2 pr-1 duration-200 hover:-translate-y-1;
+  @apply flex items-center justify-center rounded-md bg-primary-800 py-1.5 pl-2 pr-1 duration-200 hover:-translate-y-1;
 }
 
 .option-button-small {

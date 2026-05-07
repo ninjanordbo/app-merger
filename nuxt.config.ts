@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2026-05-07',
   app: {
     head: {
       htmlAttrs: {
@@ -59,10 +60,15 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'static',
   },
-  experimental: {
-    noViteNodeLoader: true,
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
   },
-  manifest: false,
   pinia: {
     storesDirs: ["./store/**"],
   },

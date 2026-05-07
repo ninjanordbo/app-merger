@@ -1367,6 +1367,50 @@ function handleOutsidePicker(event: MouseEvent) {
   }
 }
 
+function addCardToDashboard() {
+  if (!activeIndicator.value || selectedRegions.value.length === 0) {
+    return;
+  }
+
+  const dashboard = useDashboard();
+  const createCard = useCreateCard();
+  const { closeCardEdit } = createCard;
+
+  // Map DataExplorer chartType to DiagramType
+  let diagramType: "bar" | "line" | "pie" | "table" = "bar";
+  switch (chartType.value) {
+    case "line":
+      diagramType = "line";
+      break;
+    case "pie":
+      diagramType = "pie";
+      break;
+    case "bar":
+      diagramType = "bar";
+      break;
+    default:
+      diagramType = "bar";
+  }
+
+  // Determine chart mode based on displayMode
+  const chartMode = displayMode.value === "andel" ? "percent" : "numeric";
+
+  // Build the card with component using dashboard store
+  const cardWithComponent = dashboard.buildChartCard(
+    activeIndicator.value.name,
+    diagramType,
+    chartMode,
+    4, // width
+    3, // height
+  );
+
+  // Add the card to dashboard using upsertCard
+  dashboard.upsertCard(cardWithComponent);
+
+  // Close the drawer
+  closeCardEdit();
+}
+
 onMounted(() => {
   recentEntries.value = loadRecentHistory();
   document.addEventListener("mousedown", handleOutsidePicker);
@@ -1399,12 +1443,20 @@ onUnmounted(() => {
             Bibliotek
           </button>
         </div>
-        <button
-          v-if="!showLandingPage"
-          class="w-[34px] h-[34px] bg-[#3d5a4a] rounded-[6px] hover:bg-[#2d4a3a] transition-colors flex items-center justify-center"
-          :title="isFullscreen ? 'Lukk fullskjerm' : 'Fullskjerm'"
-          @click="isFullscreen = !isFullscreen"
-        >
+        <div v-if="!showLandingPage" class="flex items-center gap-[8px]">
+          <button
+            class="flex items-center gap-[6px] px-[12px] py-[6px] text-[13px] text-white bg-[#3d5a4a] rounded-[6px] hover:bg-[#2d4a3a] transition-colors border-2 border-[#3d5a4a] hover:border-[#2d4a3a]"
+            title="Legg til kort i dashboard"
+            @click="addCardToDashboard"
+          >
+            <Plus class="w-[16px] h-[16px]" />
+            <span>Bruk</span>
+          </button>
+          <button
+            class="w-[34px] h-[34px] bg-[#3d5a4a] rounded-[6px] hover:bg-[#2d4a3a] transition-colors flex items-center justify-center"
+            :title="isFullscreen ? 'Lukk fullskjerm' : 'Fullskjerm'"
+            @click="isFullscreen = !isFullscreen"
+          >
           <svg
             v-if="isFullscreen"
             width="16"
@@ -1438,6 +1490,7 @@ onUnmounted(() => {
             <line x1="3" y1="21" x2="10" y2="14" />
           </svg>
         </button>
+        </div>
       </header>
 
       <section

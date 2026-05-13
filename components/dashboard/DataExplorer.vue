@@ -1427,21 +1427,21 @@ onUnmounted(() => {
       class="flex-1 flex flex-col gap-[16px] p-[16px] min-w-0 overflow-y-auto"
     >
       <header
-        class="bg-white rounded-[12px] shadow-[0px_2px_8px_rgba(0,0,0,0.08)] flex items-center justify-between px-[24px] py-[10px] shrink-0"
+        class="bg-white rounded-[12px] shadow-[0px_2px_8px_rgba(0,0,0,0.08)] flex items-center justify-between pl-[24px] pr-[64px] py-[10px] shrink-0"
       >
         <div class="flex items-center gap-[8px]">
           <div class="w-[3px] h-[20px] bg-[#89B56B] rounded-full" />
           <span class="font-medium text-[18px] text-[#2d2d2d]">{{
             showLandingPage ? "Indikatorbibliotek" : "Datautforsker"
           }}</span>
-          <button
+          <!-- <button
             v-if="!showLandingPage"
             class="ml-[8px] flex items-center gap-[4px] px-[12px] py-[5px] text-[13px] text-[#3d5a4a] hover:bg-[#f5f5f5] rounded-[6px] transition-colors"
             @click="showLandingPage = true"
           >
             <ArrowLeft class="w-[14px] h-[14px]" />
             Bibliotek
-          </button>
+          </button> -->
         </div>
         <div v-if="!showLandingPage" class="flex items-center gap-[8px]">
           <button

@@ -1,17 +1,17 @@
 <template>
   <div
     :title="isSaved ? 'Oppdatert' : 'Modifisert'"
-    class="relative h-9 overflow-hidden rounded-md border-2 p-1"
+    class="relative overflow-hidden rounded-md border-2 py-1.5 px-2"
     :style="isSaved ? 'border-color: #3d5a4a; background-color: #3d5a4a' : 'border-color: #d97706; background-color: #d97706'"
   >
     <Transition name="slide-from-bottom">
       <LucideFileCheck
         v-if="isSaved"
-        :size="24"
-        style="fill: white; color: white"
+        :size="20"
+        style="color: white"
       />
 
-      <LucideFilePen v-else :size="24" style="fill: white; color: #d97706" />
+      <LucideFilePen v-else :size="20" style="color: white" />
     </Transition>
   </div>
 </template>

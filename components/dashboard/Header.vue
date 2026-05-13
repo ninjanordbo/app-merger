@@ -19,8 +19,8 @@
 
 
       <button
-        class="flex items-center justify-center rounded-md py-1.5 pl-2 pr-1 duration-200 hover:-translate-y-1"
-        style="background-color: #3d5a4a; color: white"
+        class="flex items-center justify-center rounded-md border-2 py-1.5 pl-2 pr-1 duration-200 hover:-translate-y-1"
+        style="background-color: #3d5a4a; border-color: #3d5a4a; color: white"
         @click="handleSaveProject()"
       >
         <LucideSave :size="20" class="text-white" />

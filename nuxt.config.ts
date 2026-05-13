@@ -57,6 +57,9 @@ export default defineNuxtConfig({
     "mapbox-gl/dist/mapbox-gl.css",
   ],
   ssr: false,
+  experimental: {
+    appManifest: false,
+  },
   nitro: {
     preset: 'static',
   },

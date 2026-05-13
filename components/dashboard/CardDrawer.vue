@@ -14,11 +14,12 @@
       style="width: 84%"
     >
       <button
-        class="absolute right-5 top-5 z-20 flex h-9 w-9 items-center justify-center rounded-md bg-white/90 text-gray-500 shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-800"
+        class="absolute right-5 top-[26px] z-20 flex h-[34px] w-[34px] items-center justify-center rounded-md border-2 bg-white transition-colors hover:bg-gray-100"
+        style="border-color: #3d5a4a"
         title="Lukk"
         @click="closeCardEdit"
       >
-        <LucideX :size="20" />
+        <LucideX :size="16" style="color: #3d5a4a" />
       </button>
 
       <DashboardDataExplorer />

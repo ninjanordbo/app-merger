@@ -19,7 +19,7 @@ import {
   X,
 } from "lucide-vue-next";
 
-const mapImage = "/preview-dashboard-bg.svg";
+const mapImage = "/map-placeholder-dataexplorer.png";
 const rangeringMapImage = "/mockup.png";
 const rangeringGraphSvg = "/curve-line.png";
 

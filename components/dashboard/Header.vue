@@ -14,7 +14,7 @@
         @click="openCardEdit()"
       >
         <LucidePlus :size="20" style="color: #3d5a4a" />
-        <span class="px-2 text-sm font-medium" style="color: #3d5a4a">Nytt kort</span>
+        <span class="px-2 text-sm font-medium" style="color: #3d5a4a">Legg til</span>
       </button>
 
 

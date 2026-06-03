@@ -819,7 +819,7 @@ const indicatorActiveFilterTags = computed(() => {
   indicatorFilterVisualization.value.forEach((vis) =>
     tags.push({
       key: `vis-${vis}`,
-      label: vis === "fordeling" ? "Underområder" : "Hovedområde",
+      label: vis === "fordeling" ? "Sammenligning" : "Oversikt",
       onRemove: () => toggleArray(indicatorFilterVisualization, vis),
     }),
   );
@@ -1699,7 +1699,7 @@ onUnmounted(() => {
                       @change="toggleLibraryFilterVisualization(vis)"
                     />
                     <span>{{
-                      vis === "fordeling" ? "Underområder" : "Hovedområde"
+                      vis === "fordeling" ? "Sammenligning" : "Oversikt"
                     }}</span>
                   </label>
                 </div>
@@ -2033,7 +2033,7 @@ onUnmounted(() => {
                 "
                 @click="selectVisualization(type)"
               >
-                {{ type === "fordeling" ? "Underområder" : "Hovedområde" }}
+                {{ type === "fordeling" ? "Sammenligning" : "Oversikt" }}
               </button>
               <div class="w-[1px] h-[20px] bg-[#d8d8d8] mx-[2px]" />
               <div class="w-[200px] flex items-center gap-[6px]">
@@ -2368,14 +2368,14 @@ onUnmounted(() => {
                 <div class="text-[18px] font-medium text-[#303030] mb-[12px]">
                   {{
                     visualizationType === "fordeling"
-                      ? `«${activeIndicator?.name || "Indikatoren"}» støtter ikke underområder`
+                      ? `«${activeIndicator?.name || "Indikatoren"}» støtter ikke Sammenligning`
                       : `«${activeIndicator?.name || "Indikatoren"}» støtter ikke denne visningen`
                   }}
                 </div>
                 <div class="text-[14px] text-[#5a5a5a] leading-[21px]">
                   {{
                     visualizationType === "fordeling"
-                      ? "Denne indikatoren er ikke tilgjengelig for underområder. Velg en annen indikator i indikatormenyen, eller bytt til hovedområde."
+                      ? "Denne indikatoren er ikke tilgjengelig for Sammenligning. Velg en annen indikator i indikatormenyen, eller bytt til Oversikt."
                       : "Velg en annen indikator i indikatormenyen, eller bytt visualiseringstype."
                   }}
                 </div>
@@ -2903,7 +2903,7 @@ onUnmounted(() => {
               </div>
               <div ref="pickerRef" class="mt-[16px]">
                 <div class="text-[12px] text-[#5a5a5a] mb-[6px] font-medium">
-                  Hovedområde
+                  Oversikt
                 </div>
                 <button
                   class="flex items-center gap-[8px] px-[10px] py-[8px] rounded-[8px] border w-full transition-colors"
@@ -3011,7 +3011,7 @@ onUnmounted(() => {
                 </div>
                 <div class="mt-[16px] pt-[16px] border-t border-[#e8e8e8]">
                   <div class="text-[12px] text-[#5a5a5a] mb-[6px] font-medium">
-                    Sammenligningsområde
+                    Referanseområde
                   </div>
                   <div class="flex flex-col gap-[6px]">
                     <div
@@ -3051,7 +3051,7 @@ onUnmounted(() => {
                       @click="openPicker('comparison')"
                     >
                       <Plus class="w-[14px] h-[14px] shrink-0" /><span
-                        >Legg til sammenligningsområde</span
+                        >Legg til referanseområde</span
                       ><ChevronDown
                         class="w-[13px] h-[13px] shrink-0 ml-auto text-[#5a5a5a] transition-transform"
                         :class="
@@ -3065,7 +3065,7 @@ onUnmounted(() => {
                       v-else
                       class="text-[11px] text-[#999] px-[10px] py-[4px]"
                     >
-                      Maks 5 sammenligningsområder
+                      Maks 5 referanseområder
                     </div>
                   </div>
                   <div
@@ -3300,7 +3300,7 @@ onUnmounted(() => {
                             toggleIndicatorFilterVisualization(vis)
                           "
                         /><span>{{
-                          vis === "fordeling" ? "Underområder" : "Hovedområde"
+                          vis === "fordeling" ? "Sammenligning" : "Oversikt"
                         }}</span></label
                       >
                     </div>
